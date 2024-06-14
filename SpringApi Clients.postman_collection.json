@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "5af61dcb-9d31-4bcb-b452-dbc5631a8498",
+		"name": "SpringApi Clients",
+		"description": "Spring Boot\n\nMaven Java 17\n\ncom.alexisayala.mi-primer-api-spring\n\nDependencies\n\nSpring Web\n\nlombok\n\nSpring DevTools //Al guardar cambios refresca el proyecto\n\nMySQL Driver\n\nSpring Data JPA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3186064"
+	},
+	"item": [
+		{
+			"name": "getClient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/client/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Succesfull Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/client/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"client",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idClient\": 1,\n    \"name\": \"Juan\",\n    \"lastName\": \"Perez\",\n    \"email\": \"juan@email.com\",\n    \"createdAt\": \"2024-05-17T06:29:45.000+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "createClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Elisa\",\r\n    \"lastName\": \"Valdivia\",\r\n    \"email\": \"elisa@email.com\",\r\n    \"createdAt\": \"2024-05-17T06:29:45.000+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/client",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"client"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SuccesfulResponse",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Elisa\",\r\n    \"lastName\": \"Valdivia\",\r\n    \"email\": \"elisa@email.com\",\r\n    \"createdAt\": \"2024-05-17T06:29:45.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/client",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"client"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"idClient\": 23,\r\n    \"name\": \"Elisa\",\r\n    \"lastName\": \"Valdivia\",\r\n    \"email\": \"elisa@email.com\",\r\n    \"createdAt\": \"2024-05-17T06:29:45.000+00:00\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "updateClient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idClient\": 1,\r\n    \"name\": \"Petra\",\r\n    \"lastName\": \"Gutierrez\",\r\n    \"email\": \"petra@email.com\",\r\n    \"createdAt\": \"2024-05-17T06:29:45.000+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/client",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"client"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SuccesfulResponse",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idClient\": 1,\r\n    \"name\": \"Petra\",\r\n    \"lastName\": \"Gutierrez\",\r\n    \"email\": \"petra@email.com\",\r\n    \"createdAt\": \"2024-05-17T06:29:45.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/client",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"client"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idClient\": 1,\n    \"name\": \"Petra\",\n    \"lastName\": \"Gutierrez\",\n    \"email\": \"petra@email.com\",\n    \"createdAt\": \"2024-05-17T06:29:45.000+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteClient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/client/23",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"client",
+						"23"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SuccesfullResponse",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/client/23",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"client",
+								"23"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "getClients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/clients",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Succesfull Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/client/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"client",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idClient\": 1,\n    \"name\": \"Juan\",\n    \"lastName\": \"Perez\",\n    \"email\": \"juan@email.com\",\n    \"createdAt\": \"2024-05-17T06:29:45.000+00:00\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
